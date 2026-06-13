@@ -2,59 +2,43 @@ const getUsersWithFriend = (users, friendName) => {
   return users.filter(user => user.friends.includes(friendName));
 };
 
-const allUsers = [
+console.log(
+  getUserNames([
   {
     name: "Moore Hensley",
-    friends: ["Sharron Pace"]
+    email: "moorehensley@indexia.com",
+    balance: 2811
   },
   {
     name: "Sharlene Bush",
-    friends: ["Briana Decker", "Sharron Pace"]
+    email: "sharlenebush@tubesys.com",
+    balance: 3821
   },
   {
     name: "Ross Vazquez",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
+    email: "rossvazquez@xinware.com",
+    balance: 3793
   },
   {
     name: "Elma Head",
-    friends: ["Goldie Gentry", "Aisha Tran"]
+    email: "elmahead@omatom.com",
+    balance: 2278
   },
   {
     name: "Carey Barr",
-    friends: ["Jordan Sampson", "Eddie Strong"]
+    email: "careybarr@nurali.com",
+    balance: 3951
   },
   {
     name: "Blackburn Dotson",
-    friends: ["Jacklyn Lucas", "Linda Chapman"]
+    email: "blackburndotson@furnigeer.com",
+    balance: 1498
   },
   {
     name: "Sheree Anthony",
-    friends: ["Goldie Gentry", "Briana Decker"]
-  }
-];
+    email: "shereeanthony@kog.com",
+    balance: 2764
+  },
+])
+); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
-// [
-//   {
-//     name: "Sharlene Bush",
-//     friends: ["Briana Decker", "Sharron Pace"]
-//   },
-//   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"]
-//   }
-// ]
-
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-// [
-//   {
-//     name: "Elma Head",
-//     friends: ["Goldie Gentry", "Aisha Tran"]
-//   },
-//   {
-//     name: "Sheree Anthony",
-//     friends: ["Goldie Gentry", "Briana Decker"]
-//   }
-// ]
-
-console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
